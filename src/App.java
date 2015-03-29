@@ -4,6 +4,28 @@ import java.util.Scanner;
  * Created by akki on 3/30/2015.
  */
 public class App {
+
+    private static void viewPatient(Patient patient) {
+        System.out.printf("Name: %s \nAge: %d \nBMI: %.2f\n",patient.getName(),patient.getAge(),patient.getBMI());
+    }
+
+    private static void addPatient(Patient patient, Scanner scanner) {
+        System.out.println("Enter Patient name: ");
+        String name = scanner.nextLine();
+        patient.setName(name);
+
+        System.out.println("Enter Patient age: ");
+        int age = scanner.nextInt();
+        patient.setAge(age);
+
+        System.out.println("Enter height: ");
+        double height = scanner.nextDouble();
+        System.out.println("Enter weight: ");
+        double weight = scanner.nextDouble();
+        patient.setDetails(height,weight);
+
+    }
+
     public static void main(String[] args) {
         Patient patient = new Patient();
         running: while (true) {
@@ -19,24 +41,11 @@ public class App {
 
             switch (choice) {
                 case 1: {
-                    System.out.println("Enter Patient name: ");
-                    String name = scanner.nextLine();
-                    patient.setName(name);
-
-                    System.out.println("Enter Patient age: ");
-                    int age = scanner.nextInt();
-                    patient.setAge(age);
-
-                    System.out.println("Enter height: ");
-                    double height = scanner.nextDouble();
-                    System.out.println("Enter weight: ");
-                    double weight = scanner.nextDouble();
-                    patient.setDetails(height,weight);
-
+                    addPatient(patient,scanner);
                     break;
                 }
                 case 2: {
-                    System.out.printf("Name: %s \nAge: %d \nBMI: %.2f\n",patient.getName(),patient.getAge(),patient.getBMI());
+                   viewPatient(patient);
                     break;
                 }
                 case 3: {
