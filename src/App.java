@@ -9,7 +9,7 @@ public class App {
         running: while (true) {
             System.out.println("BMI Manager");
             System.out.println("Please select form the following" +
-                    "following menu options: \n \t1. Add new patient\n" +
+                    " menu options: \n \t1. Add new patient\n" +
                     "\t2. View patient\n\t3. Exit\n");
 
             System.out.print("Enter choice: ");
@@ -36,7 +36,7 @@ public class App {
                     break;
                 }
                 case 2: {
-                    System.out.println("Name: %s Age: %d BMI: %.2");
+                    System.out.printf("Name: %s \nAge: %d \nBMI: %.2f\n",patient.getName(),patient.getAge(),patient.getBMI());
                     break;
                 }
                 case 3: {
