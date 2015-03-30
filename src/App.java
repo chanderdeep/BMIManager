@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**BMI Manager (Prac 3)
- * Created by akki on 3/30/2015.
+ * Created by mayank on 3/30/2015.
  */
 public class App {
 

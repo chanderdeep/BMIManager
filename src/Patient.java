@@ -1,5 +1,5 @@
 /**
- * Created by akki on 3/30/2015.
+ * Created by mayank on 3/30/2015.
  */
 public class Patient {
     private  String name;
